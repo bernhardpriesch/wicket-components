@@ -1,11 +1,11 @@
 package at.priesch.wicket.components.calendar;
 
+import org.apache.wicket.markup.html.panel.Panel;
+import org.apache.wicket.markup.repeater.RepeatingView;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
-import org.apache.wicket.markup.html.panel.Panel;
-import org.apache.wicket.markup.repeater.RepeatingView;
 
 public abstract class AbstractCalendar
     extends Panel

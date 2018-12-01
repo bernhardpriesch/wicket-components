@@ -1,9 +1,9 @@
 package at.priesch.wicket.components.calendar;
 
+import org.apache.wicket.markup.repeater.RepeatingView;
+
 import java.util.Date;
 import java.util.List;
-
-import org.apache.wicket.markup.repeater.RepeatingView;
 
 public interface Calendar
 {

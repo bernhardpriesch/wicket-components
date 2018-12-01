@@ -1,12 +1,5 @@
 package at.priesch.wicket.components.calendar;
 
-import static org.junit.Assert.assertTrue;
-
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.List;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.wicket.markup.repeater.RepeatingView;
@@ -14,6 +7,13 @@ import org.apache.wicket.util.tester.WicketTester;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.List;
+
+import static org.junit.Assert.assertTrue;
 
 public class HourViewCalendarTest
     extends WicketTester
