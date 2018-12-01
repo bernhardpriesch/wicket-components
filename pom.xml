@@ -1,0 +1,76 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>at.priesch.wicket</groupId>
+    <artifactId>components</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>WicketComponents</name>
+
+       <scm>
+        <url>https://git.priesch.at</url>
+        <connection>scm:git:git@git.priesch.at:wicket-components.git</connection>
+        <developerConnection>scm:git:git@git.priesch.at:wicket-components.git</developerConnection>
+      <tag>HEAD</tag>
+  </scm>
+
+    <modules>
+
+        <module>calendar</module>
+
+    </modules>
+
+
+    <distributionManagement>
+        <repository>
+            <id>${distribution.repo.releases.id}</id>
+            <name>${distribution.repo.releases.id}</name>
+            <url>${distribution.repo.releases.url}</url>
+        </repository>
+        <snapshotRepository>
+            <id>${distribution.repo.snapshots.id}</id>
+            <name>${distribution.repo.snapshots.id}</name>
+            <url>${distribution.repo.snapshots.url}</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <properties>
+
+        <!-- Distribution Management Properties -->
+        <distribution.repo.releases.id>central</distribution.repo.releases.id>
+        <distribution.repo.releases.url>http://priesch.dyndns.org:8081/artifactory/libs-releases-local</distribution.repo.releases.url>
+        <distribution.repo.snapshots.id>snapshots</distribution.repo.snapshots.id>
+        <distribution.repo.snapshots.url>http://priesch.dyndns.org:8081/artifactory/libs-snapshot-local</distribution.repo.snapshots.url>
+
+        <!-- SVN -->
+        <svn.repo.base.url>https://subversion.priesch.at/svn</svn.repo.base.url>
+        <svn.repo.url>${svn.repo.base.url}/wicket-components/trunk</svn.repo.url>
+
+        <!-- Build Related Properties -->
+        <main.release>1.0</main.release>
+        <app.version>${project.version}</app.version>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
+        <build.time.format>yyyy.MM.dd HH:mm:ss</build.time.format>
+        <build.time.format.nospaces>yyyy.MM.dd-HH:mm:ss</build.time.format.nospaces>
+
+        <!-- External Dependencies -->
+        <wicket.version>8.2.0</wicket.version>
+
+        <servlet-api.version>3.1.0</servlet-api.version>
+
+        <log4j2.version>2.11.1</log4j2.version>
+        <slf4j.api.version>1.6.4</slf4j.api.version>
+
+        <junit.version>4.8.2</junit.version>
+
+    </properties>
+    
+</project>
+
+
+

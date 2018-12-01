@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="warn" monitorInterval="30">
+	<appenders>
+		<Console name="CONSOLE" target="SYSTEM_OUT">
+			<PatternLayout
+					pattern="[%d{ISO8601}][%-5p][%-50c{..1.}][%M][%X{SID}][%X{IMSI}][%X{CID}] %m%n%throwable{full}" />
+		</Console>
+		<!--<File name="FILE_MAIN" fileName="log/calendar.log">-->
+			<!--<PatternLayout-->
+					<!--pattern="[%d{ISO8601}][%-5p][%-50c{..1.}][%M][%X{SID}][%X{IMSI}][%X{CID}] %m%n%throwable{full}" />-->
+		<!--</File>-->
+		<!--<File name="FILE_TRACING" fileName="log/calendar.log">-->
+			<!--<PatternLayout-->
+					<!--pattern="[%d{ISO8601}][%-5p][%-50c{..1.}][%M][%X{SID}][%X{IMSI}][%X{CID}] %m%n%throwable{full}" />-->
+		<!--</File>-->
+		<Async name="ASYNC_MAIN" includeLocation="true">
+			<!--<appender-ref ref="FILE_MAIN" />-->
+			<appender-ref ref="CONSOLE" />
+		</Async>
+		<Async name="ASYNC_TRACING">
+			<!--<appender-ref ref="FILE_TRACING" />-->
+			<appender-ref ref="CONSOLE" />
+		</Async>
+	</appenders>
+	<loggers>
+		<logger name="org" level="warn">
+			<appender-ref ref="ASYNC_MAIN" />
+		</logger>
+
+		<logger name="com" level="warn">
+			<appender-ref ref="ASYNC_MAIN" />
+		</logger>
+
+		<logger name="java" level="warn">
+			<appender-ref ref="ASYNC_MAIN" />
+		</logger>
+
+		<logger name="javax" level="warn">
+			<appender-ref ref="ASYNC_MAIN" />
+		</logger>
+
+		<logger name="at.priesch" level="trace" additivity="false">
+			<appender-ref ref="ASYNC_MAIN" />
+		</logger>
+
+		<logger name="TRACING" level="trace">
+			<appender-ref ref="ASYNC_TRACING" />
+		</logger>
+
+		<root level="trace">
+			<appender-ref ref="ASYNC_MAIN" />
+		</root>
+	</loggers>
+</configuration> 
+
